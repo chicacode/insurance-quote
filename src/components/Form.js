@@ -53,7 +53,7 @@ const Error = styled.div`
 `;
 
 
-const Form = ({setResume})=>{
+const Form = ({ setResume, setLoading })=>{
     const [data, setData] = useState({
         brand: '',
         year: '',
@@ -92,7 +92,7 @@ const Form = ({setResume})=>{
     
         result = calculateBrand(brand) * result;
 
-        console.log('calculate brand',result);
+        // console.log('calculate brand',result);
 
         //compute the brand if is european is more expensive
 
@@ -101,11 +101,19 @@ const Form = ({setResume})=>{
         // console.log('incremente plan', incrementQuote)
 
         result = parseFloat(incrementQuote * result ).toFixed(2);
+        
+        setLoading(true);
 
-        setResume({
-            quotation: result,
-            data
-        })
+        setTimeout(() =>{
+
+            setLoading(false);
+            setResume({
+                quotation: result,
+                data
+            })
+        }, 3000);
+
+      
     }
     return(
         <form onSubmit={getInsurance}>

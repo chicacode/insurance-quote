@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Form from './components/Form';
 import Resume from './components/Resume';
 import Result from './components/Result';
+import Spinner from './components/Spinner';
 
 import styled from '@emotion/styled';
 
@@ -27,13 +28,18 @@ function App() {
     }
   });
 
+  const [ loading, setLoading ] = useState(false);
+
 const { data, quotation } = resume;
   return (
     <Container>
       <Header title='Insurance Quote' />
 
       <FormContainer>
-        <Form setResume={setResume}/>
+        <Form setResume={setResume} setLoading={setLoading}/>
+
+        { loading && <Spinner /> }
+       
         <Resume data={data}/>
         <Result quotation={quotation}/>
       </FormContainer>
