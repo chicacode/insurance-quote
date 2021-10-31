@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { firstUpperCase } from '../helper';
-
+import PropTypes from 'prop-types';
 
 const ContainerResume = styled.div`
     padding: 1rem;
@@ -34,7 +34,8 @@ const Resume = ({ data }) => {
             </ul>
         </ContainerResume>
     )
-
 }
-
+Resume.protoTypes = {
+    data: PropTypes.object.isRequired
+}
 export default Resume;
