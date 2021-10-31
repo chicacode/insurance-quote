@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 import { getDifferenceYear, calculateBrand, getQuote } from '../helper';
 
@@ -177,4 +178,8 @@ const Form = ({ setResume, setLoading })=>{
     )
 }
 
+Form.propTypes = {
+    setResume: PropTypes.func.isRequired,
+    setLoading: PropTypes.func.isRequired
+}
 export default Form;
