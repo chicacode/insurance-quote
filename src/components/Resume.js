@@ -6,8 +6,8 @@ import { firstUpperCase } from '../helper';
 const ContainerResume = styled.div`
     padding: 1rem;
     text-align: center;
-    background-color: #f4791f;
-    color: #fff;
+    background-color: #E4E5E6;
+    color: #544a7d;
     margin-top: 1rem;
 `;
 
@@ -26,7 +26,7 @@ const Resume = ({ data }) => {
                     Brand: { firstUpperCase(brand) }
                 </li>
                 <li>
-                    Quote: {quote}
+                    Quote: {firstUpperCase(quote)}
                 </li>
                 <li>
                     Year: {year}

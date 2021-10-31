@@ -2,7 +2,9 @@ html {
   box-sizing: border-box;
 }
 body {
-  background: #f2e9e3;
+  background: #8f8d7cbe; 
+  /* background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7); 
+  background: linear-gradient(to right, #fffcdc, #d9a7c7);  */
   font-family: Arial, Helvetica, sans-serif;
 }
 ul {

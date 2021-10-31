@@ -44,7 +44,7 @@ const Button = styled.button`
 `;
 
 const Error = styled.div`
-    background-color: #f12711;
+    background-color: #b92b27;
     color: white;
     padding: 1rem;
     width: 100%;

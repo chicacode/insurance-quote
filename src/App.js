@@ -2,15 +2,18 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Form from './components/Form';
 import Resume from './components/Resume';
+import Result from './components/Result';
+
 import styled from '@emotion/styled';
 
 const Container = styled.div`
   max-width: 600px;
   margin: 0 auto;
+  margin-top: 100px;
 `;
 
 const FormContainer = styled.div`
-  background-color: #fff4f1;
+background-color: #fdfcece3;
   padding: 3rem;
 `;
 
@@ -24,7 +27,7 @@ function App() {
     }
   });
 
-const { data } = resume;
+const { data, quotation } = resume;
   return (
     <Container>
       <Header title='Insurance Quote' />
@@ -32,6 +35,7 @@ const { data } = resume;
       <FormContainer>
         <Form setResume={setResume}/>
         <Resume data={data}/>
+        <Result quotation={quotation}/>
       </FormContainer>
     </Container>
   );
