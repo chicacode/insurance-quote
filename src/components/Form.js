@@ -53,7 +53,7 @@ const Error = styled.div`
 `;
 
 
-const Form = ()=>{
+const Form = ({setResume})=>{
     const [data, setData] = useState({
         brand: '',
         year: '',
@@ -101,6 +101,11 @@ const Form = ()=>{
         // console.log('incremente plan', incrementQuote)
 
         result = parseFloat(incrementQuote * result ).toFixed(2);
+
+        setResume({
+            quotation: result,
+            data
+        })
     }
     return(
         <form onSubmit={getInsurance}>

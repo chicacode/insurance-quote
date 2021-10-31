@@ -25,3 +25,7 @@ export function calculateBrand(brand){
 export function getQuote(quote){
     return (quote === 'basic') ? 1.20 : 1.50;
 }
+
+export function firstUpperCase(text){
+    return text.charAt(0).toUpperCase() + text.slice(1);
+}
